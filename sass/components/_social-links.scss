@@ -1,0 +1,13 @@
+.social-link {
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-link-svg {
+  width: 20px;
+  height: 20px;
+  fill: $social-links-color;
+}

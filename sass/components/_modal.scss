@@ -1,0 +1,144 @@
+.modal-wind {
+  position: absolute;
+  top: 93px;
+  left: 50%;
+  padding: 40px;
+  background-color: #3f51b5;
+  transform: translatex(-50%);
+  background-color: $interactive-text-color;
+  transition: 250ms linear;
+  width: 100%;
+
+  @media screen and (min-width: 480px)  {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+
+  &.modal-wind {
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.blank-user-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.095;
+  letter-spacing: 0.03em;
+}
+
+.blank-user-svg {
+  position: relative;
+
+  & > svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+  }
+
+  & + label {
+    margin-top: 10px;
+  }
+}
+
+.blank-user-agreement {
+  & a {
+    font-size: 12px;
+    @media screen and (min-width: 1200px) {
+      
+      font-size: 14px;
+    }
+    line-height: 1.714;
+    color: $active-text-color;
+  }
+}
+
+.contact-form {
+  & label {
+    display: block;
+  }
+
+  & label:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  & span {
+    letter-spacing: 0.01em;
+  }
+
+  & .blank-user-agreement {
+    margin-bottom: 30px;
+  }
+
+  &-name-input,
+  &-tel-input,
+  &-mail-input {
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &-name-input:focus,
+  &-tel-input:focus,
+  &-mail-input:focus,
+  &-message-input:focus {
+    border: 1px solid $active-text-color;
+    outline: none;
+  }
+
+  &-name-input:focus + svg,
+  &-tel-input:focus + svg,
+  &-mail-input:focus + svg {
+    fill: $active-text-color;
+  }
+
+  &-message-input {
+    width: 100%;
+    height: 120px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &-radio {
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.chekbox-div {
+  text-align: center;
+}
